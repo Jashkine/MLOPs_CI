@@ -1,12 +1,11 @@
+# app.py
 import streamlit as st
+
+def calculate_square(x):
+    return x ** 2
 
 st.title("🔢 Square Finder Calculator")
 
-# Input
 number = st.number_input("Enter a number:", value=0.0)
-
-# Compute square
-square = number ** 2
-
-# Output
+square = calculate_square(number)
 st.write(f"The square of {number} is **{square}**.")
